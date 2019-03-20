@@ -1,0 +1,1 @@
+.\netcat\nc.exe -ul -p5800 -w 2 | .\netcat\nc.exe | .\MPlayer\mplayer.exe -fps 60 -demuxer h264es -cache 512 -

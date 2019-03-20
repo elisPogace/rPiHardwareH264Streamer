@@ -11,7 +11,7 @@ ipBroadcast(){
 ipBroadcast &
 
 while true; do
-        until raspivid -l -o tcp://0.0.0.0:5801 -t 999999 -w 1280 -h 720 -fps 24 --ISO 800 -md 5 --profile high --imxfx blur --colfx 128:128 -b 2500000 -fl -ex                                   off -ss 10000 --analoggain 12.0 -vf --nopreview; do
+        until raspivid -l -o tcp://0.0.0.0:5801 -t 999999 -w 1280 -h 720 -fps 24 --ISO 800 -md 5 --profile high --imxfx blur --colfx 128:128 -b 2500000 -fl -ex off -ss 10000 --analoggain 12.0 -vf --nopreview; do
                 echo "Camserver Crashed and exited with code $?. Respawning...">&2
                 sleep 1
         done
